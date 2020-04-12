@@ -98,7 +98,7 @@ function buildAndShowHomeHTML (categories) {
     homeHtmlUrl,
     function (homeHtmlUrl) {
       var randomCategory = chooseRandomCategory(categories);
-      var chosenCategoryShortName = String(randomCategory.short_name);
+      var chosenCategoryShortName = randomCategory.short_name.toString();
 
       // TODO: STEP 2: Here, call chooseRandomCategory, passing it retrieved 'categories'
       // Pay attention to what type of data that function returns vs what the chosenCategoryShortName
@@ -144,7 +144,6 @@ function chooseRandomCategory (categories) {
   var randomArrayIndex = Math.floor(Math.random() * categories.length);
 
   // return category object with that randomArrayIndex
-  console.log(categories[randomArrayIndex]);
   return categories[randomArrayIndex];
 }
 
