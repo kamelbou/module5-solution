@@ -97,8 +97,9 @@ function buildAndShowHomeHTML (categories) {
   $ajaxUtils.sendGetRequest(
     homeHtmlUrl,
     function (homeHtmlUrl) {
-      var chosenCategoryShortName = chooseRandomCategory(categories).short_name;
-      console.log(chooseRandomCategory(categories));
+      var randomCategory = chooseRandomCategory(categories);
+      var chosenCategoryShortName = randomCategory.short_name;
+      console.log(chosenCategoryShortName);
 
       // TODO: STEP 2: Here, call chooseRandomCategory, passing it retrieved 'categories'
       // Pay attention to what type of data that function returns vs what the chosenCategoryShortName
